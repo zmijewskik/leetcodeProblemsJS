@@ -5,7 +5,7 @@
 const generateParenthesis = (n) => {
   const res = []
 
-  if (n < 1 || n > 7) return 0
+  if (n < 1 || n > 8) return res
 
   const go = (l, r, s) => {
     if (s.length === 2 * n) {
