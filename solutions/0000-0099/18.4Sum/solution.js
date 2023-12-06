@@ -3,8 +3,12 @@
  * @param {number} target
  * @return {number[][]}
  */
+var sort = function (x) {
+  x.sort((a, b) => a - b)
+}
+
 var fourSum = function (nums, target) {
-  nums.sort((a, b) => a - b)
+  sort(nums)
   const result = []
 
   for (let i = 0; i < nums.length - 3; i++) {
@@ -32,3 +36,9 @@ var fourSum = function (nums, target) {
   }
   return result
 }
+
+var nums = [1, 0, -1, 0, -2, 2],
+  target = 0
+
+var result = fourSum(nums, target)
+console.log(result)
